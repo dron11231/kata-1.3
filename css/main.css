@@ -1,0 +1,130 @@
+body {
+    background-color: white;
+    font-family: 'TT Lakes', sans-serif;
+    margin: 0;
+
+}
+
+/*header*/
+
+.header {
+    display: flex;
+    padding-top: 19px;
+    padding-bottom: 19px;
+    gap: 18px;
+    align-items: center;
+}
+
+.header__right-elements {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.header__left-elements {
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+    gap: 15px;
+}
+
+.header__nav-link {
+    background: url(/images/burger.svg) no-repeat;
+    background-size: contain;
+    width: 39px;
+    height: 39px;
+}
+
+.header__nav-link:hover {
+    content: "Навигация по сайту"
+}
+
+.header__line-left {
+    display: none;
+}
+
+.header__line-right {
+    width: 2px;
+    height: 32px;
+    background-color: #EAEAEA;
+}
+
+.header__text {
+    visibility: hidden;
+    position: absolute; 
+}
+
+.header__request {
+    background: url(/images/repair.svg);
+    background-size: contain;
+    width: 39px;
+    height: 39px;
+}
+
+.header__status {
+    background: url(/images/checkstatus.svg);
+    background-size: contain;
+    width: 39px;
+    height: 39px;
+}
+
+/*main*/
+
+main {
+    padding-top: 24px;
+    background-color: #F8F8F8;
+    width: 100%;
+}
+
+.main-menu__section-name {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.main-menu__highlight {
+    width: 4px;
+    height: 40px;
+    background-color: #41F6D7;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.main-menu__title {
+    font-size: 28px;
+    margin: 0;
+}
+
+.menu {
+    width: 100%;
+    overflow: scroll;
+    margin-top: 24px;
+}
+
+.menu__list{
+    display: flex;
+    width: max-content;
+    margin-left: 16px;
+}
+
+.menu__item {
+    text-decoration: none;
+    color: #7E7E82;
+    font-size: 16px;
+    padding: 8px 16px 8px 16px;
+}
+
+.menu__item--active {
+    border: 2px solid #B8FFEC;
+    border-radius: 6px;
+    background-color: white;
+}
+
+.section-content {
+    margin-top: 24px;
+    margin-left: 16px;
+}
+
+.section-content__p {
+    margin-top: 0;
+}
