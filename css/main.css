@@ -117,6 +117,15 @@ main {
     margin: 0;
 }
 
+.main-menu__icons {
+    display: none;
+}
+
+.main-menu__caption {
+    display: flex;
+    gap: 12px;
+}
+
 .menu {
     width: 100%;
     overflow: scroll;

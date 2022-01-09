@@ -9,6 +9,10 @@
         display: block;
     }
 
+    .section-content__p {
+        width: 312px;
+    }
+
     .section-content__p--visibility {
         display: block;
     }
@@ -29,6 +33,19 @@
 }
 
 @media (min-width: 1024px) {
+
+    .header {
+        display: none;
+    }
+
+    main {
+        padding-top: 42px;
+    }
+
+    .section-content__p {
+        width: auto;
+    }
+
     .section-content__picture--size--sm {
         display: none;
     }
@@ -53,5 +70,27 @@
     .main-menu__section-name {
         display: flex;
         justify-content: space-between;
+        padding-right: 25px;
     }
+
+    .main-menu__icons {
+        display: flex;
+        gap: 32px;
+    }
+
+
+    .status, .request {
+        width: auto;
+        line-height: 40px;
+        background-size: 40px;
+        background-position-x: 100%;
+        padding-right: 48px;
+    }
+
+    .icon__text {
+        color: #1B1C21;
+        font-size: 16px;
+        font-weight: 600;
+    }
+
 }
