@@ -1,38 +1,38 @@
+
 body {
     background-color: white;
     font-family: 'TT Lakes', sans-serif;
-    margin: 0;
-
+    margin: 0; 
+    
 }
 
 /*header*/
 
 .header {
     display: flex;
-    padding-top: 19px;
-    padding-bottom: 19px;
-    gap: 18px;
+    padding: 19px 16px 19px 16px;
     align-items: center;
+    justify-content: space-between; 
+    word-break: break-word; 
 }
 
 .header__right-elements {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 15px; 
 }
 
 .header__left-elements {
     display: flex;
     align-items: center;
-    margin-left: 15px;
-    gap: 15px;
+    gap: 16px; 
 }
 
 .header__nav-link {
     background: url(/images/burger.svg) no-repeat;
     background-size: contain;
-    width: 39px;
-    height: 39px;
+    width: 40px;
+    height: 40px;
 }
 
 .header__nav-link:hover {
@@ -41,6 +41,9 @@ body {
 
 .header__line-left {
     display: none;
+    width: 2px;
+    height: 32px;
+    background-color: #EAEAEA;
 }
 
 .header__line-right {
@@ -49,23 +52,42 @@ body {
     background-color: #EAEAEA;
 }
 
-.header__text {
-    visibility: hidden;
-    position: absolute; 
+
+.request {
+    background: url(/images/repair.svg) no-repeat;
+    background-size: contain;
+    width: 40px;
+    height: 40px;
 }
 
-.header__request {
-    background: url(/images/repair.svg);
+.status {
+    background: url(/images/checkstatus.svg) no-repeat;
     background-size: contain;
-    width: 39px;
-    height: 39px;
+    width: 40px;
+    height: 40px;
 }
 
-.header__status {
-    background: url(/images/checkstatus.svg);
-    background-size: contain;
-    width: 39px;
-    height: 39px;
+ .feedback-group {
+    display: none;
+    align-items: center;
+    gap: 16px;
+}
+
+.feedback-group__link {
+    width: 40px;
+    height: 40px;
+} 
+
+.feedback-group__call {
+    background: url(/images/call.svg)
+}
+
+.feedback-group__chat {
+    background: url(/images/chat.svg)
+}
+
+.feedback-group__profile {
+    background: url(/images/profile.svg)
 }
 
 /*main*/
@@ -121,10 +143,49 @@ main {
 }
 
 .section-content {
+    display: flex;
+    flex-direction: column; 
     margin-top: 24px;
     margin-left: 16px;
+    gap: 16px;
 }
 
+
+
 .section-content__p {
-    margin-top: 0;
+    letter-spacing: 0.2px;
+    line-height: 20px;
 }
+
+.section-content__p--indent {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+
+.section-content__btn {
+    border: none;
+    background-color: #F8F8F8;
+    color: #1B1C21;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: -0.2px;
+    padding: 0 0 0 32px;
+    background-image: url(/images/expand.svg);
+    background-repeat: no-repeat;
+    align-self: baseline;
+    margin-top: 16px; 
+}
+
+.section-content__picture--size--sm {
+    margin-left: -20px;
+}
+
+.section-content__picture--size--md, .section-content__picture--size--lg, .section-content__p--visibility, .section-content__more--visibility {
+    display: none;
+}
+
+.icon--visibility {
+    display: none;
+}
+
