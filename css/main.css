@@ -29,7 +29,7 @@ body {
 }
 
 .header__nav-link {
-    background: url(/images/burger.svg) no-repeat;
+    background: url(../images/burger.svg) no-repeat;
     background-size: contain;
     width: 40px;
     height: 40px;
@@ -54,14 +54,14 @@ body {
 
 
 .request {
-    background: url(/images/repair.svg) no-repeat;
+    background: url(../images/repair.svg) no-repeat;
     background-size: contain;
     width: 40px;
     height: 40px;
 }
 
 .status {
-    background: url(/images/checkstatus.svg) no-repeat;
+    background: url(../images/checkstatus.svg) no-repeat;
     background-size: contain;
     width: 40px;
     height: 40px;
@@ -79,15 +79,15 @@ body {
 } 
 
 .feedback-group__call {
-    background: url(/images/call.svg)
+    background: url(../images/call.svg)
 }
 
 .feedback-group__chat {
-    background: url(/images/chat.svg)
+    background: url(../images/chat.svg)
 }
 
 .feedback-group__profile {
-    background: url(/images/profile.svg)
+    background: url(../images/profile.svg)
 }
 
 /*main*/
@@ -180,7 +180,7 @@ main {
     font-weight: 600;
     letter-spacing: -0.2px;
     padding: 0 0 0 32px;
-    background-image: url(/images/expand.svg);
+    background-image: url(../images/expand.svg);
     background-repeat: no-repeat;
     align-self: baseline;
     margin-top: 16px; 
