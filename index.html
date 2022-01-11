@@ -6,49 +6,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/resize.css">
-    <link rel="stylesheet" href="fonts/TT-Lakes/stylesheet.css">
+    <link rel="stylesheet" href="assets/fonts/TT-Lakes/stylesheet.css">
     <title>Document</title>
 </head>
 <body>
     <header class="header">
-        <div class="header__left-elements">
+        <div class="header__inner">
             <a href="#" class="header__nav-link" title="Навигация по сайту"></a>
-            <div class="header__line-left"></div>
-            <img src="images/logo.svg" alt="logo">
+            <img src="assets/images/logo.svg" alt="logo">
         </div>
-        <div class="header__right-elements">
+        <div class="header__inner">
             <div class="feedback-group">
-                <a href="#" class="feedback-group__call feedback-group__link icon" title="Заказать обратный звонок"></a>
-                <a href="#" class="feedback-group__chat feedback-group__link icon" title="Открыть чат с менеджером"></a>
-                <a href="#" class="feedback-group__profile feedback-group__link icon" title="Профиль"></a>
+                <button href="#" class="feedback-group__link action" title="Заказать обратный звонок"><img src="assets/images/call.svg" alt="Обратный звонок"></button>
+                <button href="#" class="feedback-group__link action" title="Открыть чат с менеджером"><img src="assets/images/chat.svg" alt="Чат с менеджером"></button>
+                <button href="#" class="feedback-group__link action" title="Профиль"><img src="assets/images/profile.svg" alt="Профиль"></button>
             </div>
-            <div class="header__line-right"></div>
-            <div class="request icon"></div>
-            <div class="status icon"></div>
+            <button class="request action"><img src="assets/images/repair.svg" alt="Статус ремонта"></button>
+            <button class="status action"><img src="assets/images/checkstatus.svg" alt="Оставить заявку"></button>
         </div>
     </header>
     <main>
         <section class="main-menu">
             <div class="main-menu__section-name">
                 <div class="main-menu__caption">
-                    <div class="main-menu__highlight"></div>
                     <h1 class="main-menu__title">Услуги и сервисы</h1>
                 </div>
-                <div class="main-menu__icons">
-                    <div class="request icon icon--visibility"><span class="icon__text">Статус ремонта</span></div>
-                    <div class="status icon icon--visibility"><span class="icon__text">Оставить заявку</span></div>
+                <div class="main-menu__actions">
+                    <button class="request action action--visibility">Статус ремонта<img src="assets/images/repair.svg" alt="Статус ремонта"></button>
+                    <button class="status action action--visibility">Оставить заявку<img src="assets/images/checkstatus.svg" alt="Оставить заявку"></button>
                 </div>
             </div>
-            <div class="menu">
-                <div class="menu__list">
-                    <a href="#" class="menu__item menu__item--active" title="Ремонтируемые бренды">Ремонтируемые бренды</a>
-                    <a href="#" class="menu__item" title="Ремонтируемые устройства">Ремонтируемые устройства</a>
-                    <a href="#" class="menu__item" title="Цены на услуги">Цены на услуги</a>
-                    <a href="#" class="menu__item" title="Адреса сервисных центров">Адреса сервисных центров</a>
-                    <a href="#" class="menu__item" title="Специальные цены">Специальные цены</a>
-                   <a href="#" class="menu__item" title="Отзывы">Отзывы</a> 
-                </div>
-            </div> 
+            <menu class="menu">
+                <ul class="menu__list">
+                    <li class="menu__item menu__item--active"><a href="#" class="menu__link" title="Ремонтируемые бренды">Ремонтируемые бренды</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link" title="Ремонтируемые устройства">Ремонтируемые устройства</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link" title="Цены на услуги">Цены на услуги</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link" title="Адреса сервисных центров">Адреса сервисных центров</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link" title="Специальные цены">Специальные цены</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link" title="Отзывы">Отзывы</a></li>
+                </ul>
+            </menu> 
         </section>
         <section class="section-content">
             <div class="section-content__text">
@@ -56,11 +53,11 @@
                 <p class="section-content__p section-content__p--visibility">Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера
                     <span class="section-content__more section-content__more--visibility">, что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.</span>
                 </p>
-                <button class="section-content__btn">Читать далее</button>
+                <button class="section-content__btn"><img src="assets/images/expand.svg" alt="Развернуть текст">Читать далее</button>
             </div>
-            <img src="images/cps.png" alt="logo photo" class="section-content__picture section-content__picture--size--sm">
-            <img src="images/cps-md.png" alt="logo photo" class="section-content__picture section-content__picture--size--md">
-            <img src="images/cps-lg.png" alt="" class="section-content__picture section-content__picture--size--lg">
+            <img src="assets/images/cps.png" alt="logo photo" class="section-content__picture section-content__picture--size--sm">
+            <img src="assets/images/cps-md.png" alt="logo photo" class="section-content__picture section-content__picture--size--md">
+            <img src="assets/images/cps-lg.png" alt="logo photo" class="section-content__picture section-content__picture--size--lg">
         </section>
     </main>
 </body>

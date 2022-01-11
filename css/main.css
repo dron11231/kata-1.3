@@ -10,29 +10,29 @@ body {
 
 .header {
     display: flex;
-    padding: 19px 16px 19px 16px;
+    padding: 1.2rem 1rem;
     align-items: center;
     justify-content: space-between; 
     word-break: break-word; 
+    gap: 16px;
 }
 
-.header__right-elements {
-    display: flex;
-    align-items: center;
-    gap: 15px; 
-}
 
-.header__left-elements {
+.header__inner {
     display: flex;
     align-items: center;
     gap: 16px; 
 }
 
 .header__nav-link {
-    background: url(/images/burger.svg) no-repeat;
+    background: url(../assets/images/burger.svg) no-repeat;
     background-size: contain;
     width: 40px;
     height: 40px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-right: 16px;
 }
 
 .header__nav-link:hover {
@@ -52,19 +52,43 @@ body {
     background-color: #EAEAEA;
 }
 
+.header__nav-link::after {
+    width: 2px;
+    height: 32px;
+    background-color: #EAEAEA;
+    display: none;
+    position: absolute;
+    left: 56px;
+    content: "";
+}
+
+.request::after {
+    width: 2px;
+    height: 32px;
+    background-color: #EAEAEA;
+    display: block;
+    content: "";
+    position: absolute;
+    right: 56px;
+}
+
 
 .request {
-    background: url(/images/repair.svg) no-repeat;
-    background-size: contain;
     width: 40px;
     height: 40px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-left: 16px;
+    text-align: center;
+    padding: 0;
 }
 
 .status {
-    background: url(/images/checkstatus.svg) no-repeat;
-    background-size: contain;
     width: 40px;
     height: 40px;
+    text-align: center;
+    padding: 0;
 }
 
  .feedback-group {
@@ -78,19 +102,16 @@ body {
     height: 40px;
 } 
 
-.feedback-group__call {
-    background: url(/images/call.svg)
-}
-
-.feedback-group__chat {
-    background: url(/images/chat.svg)
-}
-
-.feedback-group__profile {
-    background: url(/images/profile.svg)
-}
 
 /*main*/
+
+.action {
+    border: none;
+    color: #1B1C21;
+    font-size: 16px;
+    font-weight: 600;
+    background: none;
+}
 
 main {
     padding-top: 24px;
@@ -104,7 +125,9 @@ main {
     gap: 12px;
 }
 
-.main-menu__highlight {
+
+.main-menu__title::before {
+    content: "";
     width: 4px;
     height: 40px;
     background-color: #41F6D7;
@@ -115,9 +138,13 @@ main {
 .main-menu__title {
     font-size: 28px;
     margin: 0;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    gap: 16px;
 }
 
-.main-menu__icons {
+.main-menu__actions {
     display: none;
 }
 
@@ -130,19 +157,28 @@ main {
     width: 100%;
     overflow: scroll;
     margin-top: 24px;
+    padding: 0;
+    margin-bottom: 0;
 }
 
 .menu__list{
     display: flex;
     width: max-content;
     margin-left: 16px;
+    padding: 0;
+    list-style: none;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 .menu__item {
+    padding: 8px 16px;
+}
+
+.menu__link {
     text-decoration: none;
     color: #7E7E82;
     font-size: 16px;
-    padding: 8px 16px 8px 16px;
 }
 
 .menu__item--active {
@@ -179,11 +215,11 @@ main {
     font-size: 16px;
     font-weight: 600;
     letter-spacing: -0.2px;
-    padding: 0 0 0 32px;
-    background-image: url(/images/expand.svg);
-    background-repeat: no-repeat;
+    padding: 0;
     align-self: baseline;
-    margin-top: 16px; 
+    margin-top: 16px;
+    display: flex; 
+    align-items: center;
 }
 
 .section-content__picture--size--sm {
@@ -194,7 +230,7 @@ main {
     display: none;
 }
 
-.icon--visibility {
+.action--visibility {
     display: none;
 }
 

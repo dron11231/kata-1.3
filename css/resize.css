@@ -5,6 +5,14 @@
         padding-right: 40px;
     }
 
+    .header__nav-link::after {
+        display: block;
+    }
+
+    .main-menu__title {
+        gap: 24px;
+    }
+
     .header__line-left {
         display: block;
     }
@@ -38,6 +46,14 @@
         display: none;
     }
 
+    .request::after {
+        display: none;
+    }
+
+    .main-menu__title {
+        gap: 32px;
+    }
+
     main {
         padding-top: 42px;
     }
@@ -62,7 +78,7 @@
         display: inline;
     }
 
-    .icon--visibility {
+    .action--visibility {
         display: block;
         
     }
@@ -73,24 +89,20 @@
         padding-right: 25px;
     }
 
-    .main-menu__icons {
+    .main-menu__actions {
         display: flex;
         gap: 32px;
     }
 
 
     .status, .request {
-        width: auto;
-        line-height: 40px;
-        background-size: 40px;
-        background-position-x: 100%;
+        width: auto; 
+        position: static;
         padding-right: 48px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
     }
 
-    .icon__text {
-        color: #1B1C21;
-        font-size: 16px;
-        font-weight: 600;
-    }
 
 }
