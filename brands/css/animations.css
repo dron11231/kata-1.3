@@ -1,0 +1,10 @@
+@keyframes showAll {
+    from {
+        height: 170px;
+    }
+
+    to {
+        height: 365px;
+    }
+}
+

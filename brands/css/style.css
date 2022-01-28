@@ -1,0 +1,54 @@
+body {
+    margin: 0;
+    background: #F8F8F8;
+    font-family: 'TT Lakes', sans-serif;
+}
+
+
+.slider__wrapper {
+    padding-bottom: 42px;
+    padding-left: 16px;
+    height: inherit;
+}
+
+.swiper-pagination-bullet {
+    width: 12px !important;
+    height: 12px !important;
+    background: #979797 !important;
+}
+
+.swiper-pagination-bullet-active {
+    background: #B5B6BC !important;
+}
+
+.brands__title {
+    margin: 0;
+    font-size: 16px;
+    color: #7E7E82;
+    font-weight: 300;
+}
+
+.brands__header {
+    padding: 16px;
+    background: linear-gradient(to right, #F8F8F8 0%, #FFFFFF 98.61%);
+}
+
+.brands__slider {
+    margin-top: 16px;
+    transition: height 1s;
+    overflow: hidden;
+}
+
+.show-btn {
+    background: none;
+    border: none;
+    display: none;
+    align-items: center;
+    font-family: 'TT Lakes', sans-serif;
+    font-size: 16px;
+    gap: 1rem;
+    padding-left: 32px;
+}
+
+
+
