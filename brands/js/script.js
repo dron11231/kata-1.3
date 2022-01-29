@@ -43,7 +43,7 @@ new Swiper('.swiper', {
 
 let showBtn = document.querySelector('.show-btn');
 
-let visibilityHandler = function() {
+function visibilityHandler() {
     let slider = document.querySelector('.brands__slider');
     let btnText = showBtn.querySelector('.show-btn__text')
 
