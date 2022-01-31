@@ -1,51 +1,61 @@
-window.onresize = () => {     
-    document.location.reload(true); 
-    }
+window.addEventListener('resize', () => {
+    document.location.reload(true);
+})   
 
 if (screen.width >= 768) {
     document.querySelector('.swiper').classList.remove('swiper');
     document.querySelector('.swiper-wrapper').classList.remove('swiper-wrapper')
 }
 
+document.addEventListener("DOMContentLoaded", () => {
+    if (screen.width < 768) {
 
-if (screen.width < 768) {
-
-new Swiper('.swiper', {
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-    },
-
-    slidesPerView: 1,
-
-    spaceBetween: -50,
-
-    breakpoints: {
-        480: {
-            slidesPerView: 2,
-    
-            spaceBetween: 100,
-        },
-
-        600: {
-            slidesPerView: 2,
-
+        let swiper = new Swiper('.swiper', {
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            slidesPerView: 1,
             spaceBetween: -50,
-        },
+            breakpoints: {
+                480: {
+                    slidesPerView: 2,
+            
+                    spaceBetween: 100,
+                },
+                600: {
+                    slidesPerView: 2,
+        
+                    spaceBetween: -50,
+                },
+                700: {
+                    slidesPerView: 3,
+                    spaceBetween: 0,
+                },
+            }
+        });
+        }
+})
 
-        700: {
-            slidesPerView: 3,
-            spaceBetween: 0,
-        },
-    }
-});
+function displayHandler(arr, startingPoint, displayCondition) {
+    if (displayCondition === 'none') {
+        for (let i = startingPoint; i < arr.length; i++) {
+            arr[i].style.display = 'none';
+        }
+    };
+    if (displayCondition === 'block') {
+        for (let i = startingPoint; i < arr.length; i++) {
+            arr[i].style.display = 'block';
+        } 
+    };
 }
 
-let showBtn = document.querySelector('.show-btn');
+const showBtn = document.querySelector('.show-btn');
 
 function visibilityHandler() {
-    let slider = document.querySelector('.brands__slider');
-    let btnText = showBtn.querySelector('.show-btn__text')
+    const slider = document.querySelector('.brands__slider');
+    const slides = document.querySelectorAll('.swiper-slide')
+    const btnText = showBtn.querySelector('.show-btn__text')
 
     if (slider.classList.contains('brands__slider--show')) {
         slider.classList.remove('brands__slider--show');
@@ -54,15 +64,27 @@ function visibilityHandler() {
         btnText.innerHTML = 'Показать все'
         showBtn.classList.remove('brands__show-btn--show');
         showBtn.classList.add('brands__show-btn--hide');
+        
+        if (screen.width < 1120) {
+            setTimeout( () => displayHandler(slides, 6, 'none'), 1000)
+        } else {
+            setTimeout( () => displayHandler(slides, 8, 'none'), 1000)
+        }
 
-        return;
-    } 
-    slider.classList.remove('brands__slider--hide');
-    slider.classList.add('brands__slider--show');
+    } else {
+        slider.classList.remove('brands__slider--hide');
+        slider.classList.add('brands__slider--show');
  
-    btnText.innerHTML = 'Скрыть';
-    showBtn.classList.remove('brands__show-btn--hide');
-    showBtn.classList.add('brands__show-btn--show');
+        btnText.innerHTML = 'Скрыть';
+        showBtn.classList.remove('brands__show-btn--hide');
+        showBtn.classList.add('brands__show-btn--show');
+
+        if (screen.width < 1120) {
+            displayHandler(slides, 6, 'block');
+        } else {
+            displayHandler(slides, 8, 'block');
+        }
+    }
 }
 
 showBtn.addEventListener('click', visibilityHandler);
