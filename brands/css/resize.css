@@ -45,7 +45,7 @@
     }
 }
 
-@media (min-width: 1120px) {
+@media (min-width: 1000px) {
     .slider__wrapper {
         grid-template-columns: repeat(auto-fit, 240px);
     }
